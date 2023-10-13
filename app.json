@@ -3,7 +3,8 @@
   "description": "An Old Powerful Telegram Bot written in PTB and Telethon",
   "logo": "https://telegra.ph/file/1c554263e1be0ee469fb5.jpg",
   "keywords": ["telegram-bot"],
-  "repository": "https://github.com/DISAPPOINTED-GUY/CYBERLEGENDS-BOT.git",
+  "repository": "https://github.com/DISAPPOINTED-GUY/CYBERLEGENDS-BOT.git",  
+  "stack": "heroku-20"
   "env": {
     "TL_APP_ID": {
       "description": "Get this value from my.telegram.org! Please do not steal",
@@ -146,7 +147,8 @@
       "value": "True",
       "required": false
     }
-  },
+  }
+  
   "addons": [
     {
       "plan": "heroku-postgresql",
@@ -162,9 +164,6 @@
     },
     {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    }
-    {
-   "stack": "heroku-20"
     }
   ]
 }
