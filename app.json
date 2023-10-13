@@ -146,8 +146,7 @@
       "value": "True",
       "required": false
     }
-  }
-  
+  },
   "addons": [
     {
       "plan": "heroku-postgresql",
