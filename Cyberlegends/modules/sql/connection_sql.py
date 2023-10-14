@@ -2,7 +2,7 @@ import os
 import threading
 import time
 from typing import Union
-
+from sqlalchemy import create_engine
 from sqlalchemy import Column, String, Boolean, UnicodeText, BigInteger
 from Cyberlegends.modules.sql import SESSION, BASE
 database_url = os.environ.get("DATABASE_URL")
