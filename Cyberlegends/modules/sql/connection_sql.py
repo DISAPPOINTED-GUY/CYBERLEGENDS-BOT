@@ -5,7 +5,13 @@ from typing import Union
 
 from sqlalchemy import Column, String, Boolean, UnicodeText, BigInteger
 from Cyberlegends.modules.sql import SESSION, BASE
+database_url = 
+os.environ.get(DATABASE_URL)
 
+ 
+engine = create_engine(DATABASE_URL)
+Session = sessionmaker(bind=engine)
+SESSION = Session()
 
 
 class ChatAccessConnectionSettings(BASE):
