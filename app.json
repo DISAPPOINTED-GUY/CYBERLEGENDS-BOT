@@ -147,6 +147,9 @@
       "required": false
     }
   },
+  {
+   "stack": "heroku-20"
+  },
   "addons": [
     {
       "plan": "heroku-postgresql",
