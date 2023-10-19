@@ -1,5 +1,4 @@
- from typing import Union
-
+from typing import Union
 from future.utils import string_types
 from telegram import Chat, ParseMode, Update
 from telegram.ext import CommandHandler, MessageHandler
