@@ -1,6 +1,6 @@
 import threading
 
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, BigInteger, String
 
 from Cyberlegends.modules.sql import SESSION, BASE
 
@@ -8,7 +8,7 @@ from Cyberlegends.modules.sql import SESSION, BASE
 class PermanentPin(BASE):
     __tablename__ = "permanent_pin"
     chat_id = Column(String(14), primary_key=True)
-    message_id = Column(Integer)
+    message_id = Column(BigInteger)
 
     def __init__(self, chat_id):
         self.chat_id = str(chat_id)
