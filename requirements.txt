@@ -4,7 +4,7 @@ future
 emoji
 requests
 Telethon==1.16.4
-sqlalchemy
+SQLAlchemy==1.3.18
 pylast
 python-telegram-bot==12.8
 mtranslate
