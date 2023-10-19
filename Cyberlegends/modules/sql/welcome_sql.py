@@ -1,6 +1,6 @@
 import threading
 from typing import Union
-from sqlalchemy import Column, String, Boolean, UnicodeText, BigInteger, BigBigInteger
+from sqlalchemy import Column, String, Boolean, UnicodeText, BigInteger, BigInteger
 
 from Cyberlegends.modules.helper_funcs.msg_types import Types
 from Cyberlegends.modules.sql import SESSION, BASE
@@ -22,7 +22,7 @@ class Welcome(BASE):
     custom_leave = Column(UnicodeText, default=DEFAULT_GOODBYE)
     leave_type = Column(BigInteger, default=Types.TEXT.value)
 
-    clean_welcome = Column(BigBigInteger)
+    clean_welcome = Column(BigInteger)
 
     def __init__(self, chat_id, should_welcome=True, should_goodbye=True):
         self.chat_id = chat_id
