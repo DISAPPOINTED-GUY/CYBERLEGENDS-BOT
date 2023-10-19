@@ -1,4 +1,4 @@
-
+os-sys==0.6.8
 geopy
 future
 emoji
