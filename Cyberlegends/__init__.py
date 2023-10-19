@@ -40,7 +40,7 @@ if ENV:
     try:
         OWNER_ID = int(os.environ.get("OWNER_ID", None))
     except ValueError:
-        raise Exception("Your OWNER_ID env variable is not a valid integer.")
+        raise Exception("Your OWNER_ID env variable is not a valid BigInteger.")
 
     MESSAGE_DUMP = os.environ.get("MESSAGE_DUMP", None)
     GBAN_LOGS = os.environ.get("GBAN_LOGS", None)
@@ -51,7 +51,7 @@ if ENV:
             int(x) for x in os.environ.get(
                 "DEV_USERS", "").split())
     except ValueError:
-        raise Exception("Your dev users list does not contain valid integers.")
+        raise Exception("Your dev users list does not contain valid BigIntegers.")
 
     try:
         SUDO_USERS = set(
@@ -59,7 +59,7 @@ if ENV:
                 "SUDO_USERS", "").split())
     except ValueError:
         raise Exception(
-            "Your sudo users list does not contain valid integers.")
+            "Your sudo users list does not contain valid BigIntegers.")
 
     try:
         SUPPORT_USERS = set(
@@ -67,7 +67,7 @@ if ENV:
                 "SUPPORT_USERS", "").split())
     except ValueError:
         raise Exception(
-            "Your support users list does not contain valid integers.")
+            "Your support users list does not contain valid BigIntegers.")
 
     try:
         WHITELIST_USERS = set(
@@ -75,21 +75,21 @@ if ENV:
         )
     except ValueError:
         raise Exception(
-            "Your whitelisted users list does not contain valid integers.")
+            "Your whitelisted users list does not contain valid BigIntegers.")
     try:
         WHITELIST_CHATS = set(
             int(x) for x in os.environ.get("WHITELIST_CHATS", "").split()
         )
     except ValueError:
         raise Exception(
-            "Your whitelisted users list does not contain valid integers.")
+            "Your whitelisted users list does not contain valid BigIntegers.")
     try:
         BLACKLIST_CHATS = set(
             int(x) for x in os.environ.get("BLACKLIST_CHATS", "").split()
         )
     except ValueError:
         raise Exception(
-            "Your whitelisted users list does not contain valid integers.")
+            "Your whitelisted users list does not contain valid BigIntegers.")
 
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
     URL = os.environ.get("URL", "")  # Does not contain token
@@ -128,7 +128,7 @@ else:
     try:
         OWNER_ID = int(Config.OWNER_ID)
     except ValueError:
-        raise Exception("Your OWNER_ID variable is not a valid integer.")
+        raise Exception("Your OWNER_ID variable is not a valid BigInteger.")
 
     OWNER_USERNAME = Config.OWNER_USERNAME
     MESSAGE_DUMP = Config.MESSAGE_DUMP
@@ -137,35 +137,35 @@ else:
     try:
         DEV_USERS = set(int(x) for x in Config.DEV_USERS or [])
     except ValueError:
-        raise Exception("Your dev users list does not contain valid integers.")
+        raise Exception("Your dev users list does not contain valid BigIntegers.")
 
     try:
         SUDO_USERS = set(int(x) for x in Config.SUDO_USERS or [])
     except ValueError:
         raise Exception(
-            "Your sudo users list does not contain valid integers.")
+            "Your sudo users list does not contain valid BigIntegers.")
 
     try:
         SUPPORT_USERS = set(int(x) for x in Config.SUPPORT_USERS or [])
     except ValueError:
         raise Exception(
-            "Your support users list does not contain valid integers.")
+            "Your support users list does not contain valid BigIntegers.")
 
     try:
         WHITELIST_USERS = set(int(x) for x in Config.WHITELIST_USERS or [])
     except ValueError:
         raise Exception(
-            "Your whitelisted users list does not contain valid integers.")
+            "Your whitelisted users list does not contain valid BigIntegers.")
     try:
         WHITELIST_CHATS = set(int(x) for x in Config.WHITELIST_CHATS or [])
     except ValueError:
         raise Exception(
-            "Your whitelisted users list does not contain valid integers.")
+            "Your whitelisted users list does not contain valid BigIntegers.")
     try:
         BLACKLIST_CHATS = set(int(x) for x in Config.BLACKLIST_CHATS or [])
     except ValueError:
         raise Exception(
-            "Your whitelisted users list does not contain valid integers.")
+            "Your whitelisted users list does not contain valid BigIntegers.")
 
     WEBHOOK = Config.WEBHOOK
     URL = Config.URL

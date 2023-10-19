@@ -596,20 +596,20 @@ def covid(update, context):
     if total_tests == 0:
         total_tests = "N/A"
     else:
-        total_tests = format_integer(c_case["total_tests"])
+        total_tests = format_BigInteger(c_case["total_tests"])
 
     date = datetime.datetime.now().strftime("%d %b %Y")
 
     output = (
         f"<b>Corona Virus Statistics in {c_case['country']}</b>\n"
         f"<b>on {date}</b>\n\n"
-        f"<b>Confirmed Cases :</b> <code>{format_integer(c_case['confirmed'])}</code>\n"
-        f"<b>Active Cases :</b> <code>{format_integer(c_case['active'])}</code>\n"
-        f"<b>Deaths :</b> <code>{format_integer(c_case['deaths'])}</code>\n"
-        f"<b>Recovered :</b> <code>{format_integer(c_case['recovered'])}</code>\n\n"
-        f"<b>New Cases :</b> <code>{format_integer(c_case['new_cases'])}</code>\n"
-        f"<b>New Deaths :</b> <code>{format_integer(c_case['new_deaths'])}</code>\n"
-        f"<b>Critical Cases :</b> <code>{format_integer(c_case['critical'])}</code>\n"
+        f"<b>Confirmed Cases :</b> <code>{format_BigInteger(c_case['confirmed'])}</code>\n"
+        f"<b>Active Cases :</b> <code>{format_BigInteger(c_case['active'])}</code>\n"
+        f"<b>Deaths :</b> <code>{format_BigInteger(c_case['deaths'])}</code>\n"
+        f"<b>Recovered :</b> <code>{format_BigInteger(c_case['recovered'])}</code>\n\n"
+        f"<b>New Cases :</b> <code>{format_BigInteger(c_case['new_cases'])}</code>\n"
+        f"<b>New Deaths :</b> <code>{format_BigInteger(c_case['new_deaths'])}</code>\n"
+        f"<b>Critical Cases :</b> <code>{format_BigInteger(c_case['critical'])}</code>\n"
         f"<b>Total Tests :</b> <code>{total_tests}</code>\n\n"
         f"Data provided by <a href='{link}'>Worldometer</a>")
 
@@ -619,7 +619,7 @@ def covid(update, context):
         disable_web_page_preview=True)
 
 
-def format_integer(number, thousand_separator="."):
+def format_BigInteger(number, thousand_separator="."):
     def reverse(string):
         string = "".join(reversed(string))
         return string

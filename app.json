@@ -89,7 +89,7 @@
       "required": false
     },
     "OWNER_ID": {
-      "description": "An integer of consisting of your ID",
+      "description": "An BigInteger of consisting of your ID",
       "value": "1908955228",
       "required": true
     },

@@ -1,6 +1,6 @@
 import threading
 
-from sqlalchemy import Column, String, UnicodeText, Integer, Boolean
+from sqlalchemy import Column, String, UnicodeText, BigInteger, Boolean
 from telegram.error import BadRequest, Unauthorized
 
 from Cyberlegends import dispatcher
@@ -52,7 +52,7 @@ class BansF(BASE):
     last_name = Column(UnicodeText)
     user_name = Column(UnicodeText)
     reason = Column(UnicodeText, default="")
-    time = Column(Integer, default=0)
+    time = Column(BigInteger, default=0)
 
     def __init__(
             self,
@@ -74,7 +74,7 @@ class BansF(BASE):
 
 class FedsUserSettings(BASE):
     __tablename__ = "feds_settings"
-    user_id = Column(Integer, primary_key=True)
+    user_id = Column(BigInteger, primary_key=True)
     should_report = Column(Boolean, default=True)
 
     def __init__(self, user_id):
